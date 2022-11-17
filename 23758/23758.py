@@ -1,4 +1,3 @@
-from collections import deque
 import sys
 import math
 input=sys.stdin.readline
@@ -6,11 +5,10 @@ N=int(input())
 a=list(map(int, input().split()))
 result=0
 a.sort()
-b=deque()
-for i in range((N+1)//2):
-    b.append(a[i])
+a=a[:(N+1)//2]
 
-for i in b:
+
+for i in a:
     result+=int(math.log2(i))
 
 
